@@ -26,3 +26,13 @@ if played_before == 'no':
         break
     else:
         print("Invalid input. Press Enter to continue")
+
+    #Initialize curses mode
+    stdsr = curses.initscr()
+
+    try:
+        #trying to make the cursor invisible
+        curses.curs.set(0)
+    except _curses.error:
+        #If the terminal dosnt support it, ignore the the error and start anyway
+        pass
