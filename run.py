@@ -56,3 +56,8 @@ if played_before == 'no':
 #Create the food
 food = sh[sh//2, sw//2]
 w.addch(int(food[0])), int(food[1]), curses.ACS_PI)
+
+#Initialize the game state with curses
+key = curses.KEY_RIGHT
+#Initialize the score
+Score = 0
