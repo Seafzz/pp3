@@ -44,3 +44,12 @@ if played_before == 'no':
     w.keypad(1)
     #Refresh the screen every 100 milliseconds / 1 second
     w.timeout(100)
+
+    #Create the snake and the start cordinates for the snake
+    snk_x = sw //4
+    snk_y = sw //2
+    snake = [
+        [snk_y, snk_x],
+        [snk_y, snk_x -1],
+        [snk_y, snk_x -2]
+    ]
