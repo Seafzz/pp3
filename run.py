@@ -36,3 +36,11 @@ if played_before == 'no':
     except _curses.error:
         #If the terminal dosnt support it, ignore the the error and start anyway
         pass
+    #Get the height and width of the screen
+    sh, sw = s.getmaxyx()
+    # Create a window using the screen height and width given
+    w = curses.newwin(sh, sw, 0, 0)
+    # Accept keypad input 
+    w.keypad(1)
+    #Refresh the screen every 100 milliseconds / 1 second
+    w.timeout(100)
